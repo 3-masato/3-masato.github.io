@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 
-const lato = Lato({ weight: "400", subsets: ["latin"] });
+const lato = Lato({ weight: ["400", "700", "900"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} dark:bg-gray-950`}>
+      <body className={`${lato.className} dark:bg-gray-950 bg-amber-50`}>
         <Header />
         <Main>
           <section className="prose dark:prose-invert mx-auto">{children}</section>
